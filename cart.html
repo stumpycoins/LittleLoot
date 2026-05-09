@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>LittleLoot Cart | Checkout</title>
+    <link rel="icon" type="image/png" href="assets/LittleLoot_Logo_transparent.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="index.html" aria-label="LittleLoot home">
+        <img class="brand-logo" src="assets/LittleLoot_Logo_transparent.png" alt="" />
+        <img class="brand-name-logo" src="assets/LittleLoot_Name_Logo.png" alt="LittleLoot" />
+      </a>
+      <nav class="main-nav" aria-label="Cart navigation">
+        <a href="index.html#bestsellers">Continue Shopping</a>
+        <span class="nav-actions">
+          <a href="admin.html">Admin</a>
+          <button class="cart-button" type="button" aria-label="Cart items">
+            <span>Cart</span>
+            <strong id="cart-count">0</strong>
+          </button>
+        </span>
+      </nav>
+    </header>
+
+    <main class="cart-shell">
+      <section class="cart-heading">
+        <p class="eyebrow">Checkout</p>
+        <h1>Your cart</h1>
+      </section>
+
+      <section class="cart-layout">
+        <div class="cart-panel">
+          <div class="section-heading compact">
+            <p class="eyebrow">Items</p>
+            <h2>Order summary</h2>
+          </div>
+          <div id="cart-items" class="cart-items"></div>
+          <div id="empty-cart" class="empty-cart" hidden>
+            <h3>Your cart is empty.</h3>
+            <p>Add a few tiny treasures before checkout.</p>
+            <a class="primary-button" href="index.html#bestsellers">Shop Products</a>
+          </div>
+        </div>
+
+        <aside class="cart-panel checkout-panel">
+          <div class="section-heading compact">
+            <p class="eyebrow">Payment</p>
+            <h2>Pay securely</h2>
+          </div>
+
+          <div class="total-box">
+            <div>
+              <span>Subtotal</span>
+              <strong id="subtotal">Rs. 0</strong>
+            </div>
+            <div>
+              <span>Shipping</span>
+              <strong id="shipping">Rs. 0</strong>
+            </div>
+            <div class="grand-total">
+              <span>Total</span>
+              <strong id="grand-total">Rs. 0</strong>
+            </div>
+          </div>
+
+          <form id="payment-form" class="payment-form">
+            <label>
+              Full name
+              <input id="customer-name" type="text" placeholder="Your name" required />
+            </label>
+            <label>
+              Delivery address
+              <textarea id="customer-address" rows="3" placeholder="House, street, city and PIN" required></textarea>
+            </label>
+            <label>
+              Payment method
+              <select id="payment-method" required>
+                <option value="card">Card</option>
+                <option value="upi">UPI</option>
+                <option value="cod">Cash on delivery</option>
+              </select>
+            </label>
+            <div id="card-fields">
+              <label>
+                Card number
+                <input id="card-number" inputmode="numeric" maxlength="19" placeholder="4242 4242 4242 4242" />
+              </label>
+              <div class="form-row">
+                <label>
+                  Expiry
+                  <input id="card-expiry" type="text" maxlength="5" placeholder="MM/YY" />
+                </label>
+                <label>
+                  CVV
+                  <input id="card-cvv" inputmode="numeric" maxlength="4" placeholder="123" />
+                </label>
+              </div>
+            </div>
+            <label id="upi-field" hidden>
+              UPI ID
+              <input id="upi-id" type="text" placeholder="name@upi" />
+            </label>
+            <button id="pay-button" class="primary-button" type="submit">Pay Rs. 0</button>
+            <p id="payment-message" class="payment-message" role="status"></p>
+          </form>
+        </aside>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+    <script src="cart.js"></script>
+  </body>
+</html>

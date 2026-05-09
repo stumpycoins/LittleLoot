@@ -1,0 +1,167 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>LittleLoot | Keychains, Gifts & Tiny Treasures</title>
+    <link rel="icon" type="image/png" href="assets/LittleLoot_Logo_transparent.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="index.html" aria-label="LittleLoot home">
+        <img class="brand-logo" src="assets/LittleLoot_Logo_transparent.png" alt="" />
+        <img class="brand-name-logo" src="assets/LittleLoot_Name_Logo.png" alt="LittleLoot" />
+      </a>
+      <nav class="main-nav" aria-label="Main navigation">
+        <a href="#categories">Categories</a>
+        <a href="#bestsellers">Bestsellers</a>
+        <span class="nav-actions">
+          <a href="admin.html">Admin</a>
+          <button class="cart-button" type="button" aria-label="Open cart">
+            <span>Cart</span>
+            <strong id="cart-count">0</strong>
+          </button>
+        </span>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="hero-copy">
+          <p class="eyebrow">Tiny treasures. Big smiles.</p>
+          <h1>Keychains, charms, mini gifts and cute collectibles.</h1>
+          <p>Build a playful online shop for customers who love affordable surprises, fandom finds, stationery add-ons, and pocket-sized giftables.</p>
+          <div class="hero-actions">
+            <a class="primary-button" href="#bestsellers">Shop Bestsellers</a>
+            <a class="secondary-button" href="admin.html">Manage Stock</a>
+          </div>
+        </div>
+        <div class="hero-showcase" aria-label="Featured products">
+          <div class="floating-product large">
+            <img class="showcase-image" src="assets/star-bag-charm.svg" alt="" />
+            <strong>Bag Charms</strong>
+          </div>
+          <div class="floating-product">
+            <img class="showcase-image" src="assets/mini-camera-keychain.svg" alt="" />
+            <strong>Keychains</strong>
+          </div>
+          <div class="floating-product">
+            <img class="showcase-image" src="assets/pocket-plush-hanger.svg" alt="" />
+            <strong>Plush Minis</strong>
+          </div>
+          <div class="floating-product wide">
+            <img class="showcase-image" src="assets/heart-clip-charm.svg" alt="" />
+            <strong>Gift Loot Under Rs. 999</strong>
+          </div>
+        </div>
+      </section>
+
+      <section id="categories" class="section">
+        <div class="section-heading">
+          <p class="eyebrow">Shop by categories</p>
+          <h2>Find the right little loot.</h2>
+        </div>
+        <div class="category-grid">
+          <a class="category-card keychains" href="#bestsellers">
+            <img src="assets/mini-camera-keychain.svg" alt="" />
+            <strong>Keychains</strong>
+            <small>Anime, cute, acrylic, metal</small>
+          </a>
+          <a class="category-card charms" href="#bestsellers">
+            <img src="assets/star-bag-charm.svg" alt="" />
+            <strong>Bag Charms</strong>
+            <small>Soft hangers and clips</small>
+          </a>
+          <a class="category-card stationery" href="#bestsellers">
+            <img src="assets/desk-buddy-pen-set.svg" alt="" />
+            <strong>Stationery</strong>
+            <small>Pens, notes, desk gifts</small>
+          </a>
+          <a class="category-card plush" href="#bestsellers">
+            <img src="assets/pocket-plush-hanger.svg" alt="" />
+            <strong>Mini Plush</strong>
+            <small>Huggable tiny companions</small>
+          </a>
+        </div>
+      </section>
+
+      <section id="bestsellers" class="section shop-section">
+        <div class="section-heading">
+          <p class="eyebrow">Top picks</p>
+          <h2>Bestsellers</h2>
+        </div>
+        <div class="shop-toolbar" aria-label="Sort and filter products">
+          <label>
+            Category
+            <select id="category-filter">
+              <option value="All">All</option>
+              <option value="Keychain">Keychains</option>
+              <option value="Charm">Charms</option>
+              <option value="Gift">Gifts</option>
+              <option value="Stationery">Stationery</option>
+              <option value="Plush">Plush</option>
+            </select>
+          </label>
+          <label>
+            Stock
+            <select id="stock-filter">
+              <option value="All">All</option>
+              <option value="In Stock">In Stock</option>
+              <option value="Low Stock">Low Stock</option>
+              <option value="Sold Out">Sold Out</option>
+            </select>
+          </label>
+          <label>
+            Sort
+            <select id="sort-products">
+              <option value="featured">Featured</option>
+              <option value="price-low">Price: Low to High</option>
+              <option value="price-high">Price: High to Low</option>
+              <option value="discount">Best Discount</option>
+              <option value="name">Name</option>
+            </select>
+          </label>
+          <span id="product-count" class="product-count"></span>
+        </div>
+        <div id="product-grid" class="product-grid"></div>
+      </section>
+
+    </main>
+
+    <footer class="footer">
+      <div>
+        <strong>LittleLoot</strong>
+        <p>Sample ecommerce website for keychains and cute gift products.</p>
+      </div>
+      <a href="admin.html">Admin inventory</a>
+    </footer>
+
+    <div id="quick-look" class="quick-look" hidden>
+      <button class="quick-look-backdrop" type="button" data-close-quick-look aria-label="Close quick look"></button>
+      <section class="quick-look-dialog" role="dialog" aria-modal="true" aria-labelledby="quick-look-title">
+        <button class="quick-look-close" type="button" data-close-quick-look aria-label="Close quick look">x</button>
+        <div class="quick-look-art">
+          <img id="quick-look-image" src="" alt="" />
+          <div id="quick-look-thumbs" class="quick-look-thumbs"></div>
+        </div>
+        <div class="quick-look-info">
+          <p id="quick-look-category" class="eyebrow"></p>
+          <h2 id="quick-look-title"></h2>
+          <p id="quick-look-description"></p>
+          <div class="price-row">
+            <strong id="quick-look-price"></strong>
+            <del id="quick-look-mrp"></del>
+          </div>
+          <span id="quick-look-status" class="status"></span>
+          <button id="quick-look-add" class="primary-button" type="button">Add to Cart</button>
+        </div>
+      </section>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

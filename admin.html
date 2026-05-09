@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>LittleLoot Admin | Storage Manager</title>
+    <link rel="icon" type="image/png" href="assets/LittleLoot_Logo_transparent.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body class="admin-body">
+    <header class="site-header">
+      <a class="brand" href="index.html" aria-label="LittleLoot home">
+        <img class="brand-logo" src="assets/LittleLoot_Logo_transparent.png" alt="" />
+        <img class="brand-name-logo" src="assets/LittleLoot_Name_Logo.png" alt="LittleLoot" />
+      </a>
+      <nav class="main-nav" aria-label="Admin navigation">
+        <a href="index.html">Storefront</a>
+        <a href="#inventory">Inventory</a>
+        <a href="#product-form">Add Product</a>
+        <button class="cart-button" type="button" aria-label="Open cart">
+          <span>Cart</span>
+          <strong id="cart-count">0</strong>
+        </button>
+      </nav>
+    </header>
+
+    <main class="admin-shell">
+      <section class="admin-hero">
+        <div>
+          <p class="eyebrow">Storage manager</p>
+          <h1>Manage products, pricing and stock.</h1>
+          <p>Add sample items, update quantity, pause sold-out products, and see low-stock alerts.</p>
+        </div>
+        <div class="stat-grid">
+          <div class="stat-card">
+            <span>Total SKUs</span>
+            <strong id="total-products">0</strong>
+          </div>
+          <div class="stat-card">
+            <span>In Stock</span>
+            <strong id="total-stock">0</strong>
+          </div>
+          <div class="stat-card warning">
+            <span>Low Stock</span>
+            <strong id="low-stock">0</strong>
+          </div>
+        </div>
+      </section>
+
+      <section class="admin-layout">
+        <form id="product-form" class="admin-panel">
+          <div class="section-heading compact">
+            <p class="eyebrow">Product editor</p>
+            <h2>Add or update item</h2>
+          </div>
+          <input type="hidden" id="product-id" />
+          <label>
+            Product name
+            <input id="name" type="text" placeholder="Mini Camera Keychain" required />
+          </label>
+          <label>
+            Category
+            <select id="category" required>
+              <option>Keychain</option>
+              <option>Charm</option>
+              <option>Gift</option>
+              <option>Stationery</option>
+              <option>Plush</option>
+            </select>
+          </label>
+          <div class="form-row">
+            <label>
+              Price
+              <input id="price" type="number" min="1" step="1" placeholder="499" required />
+            </label>
+            <label>
+              MRP
+              <input id="mrp" type="number" min="1" step="1" placeholder="999" required />
+            </label>
+          </div>
+          <div class="form-row">
+            <label>
+              Stock
+              <input id="stock" type="number" min="0" step="1" placeholder="24" required />
+            </label>
+            <label>
+              Product images
+              <input id="image" type="file" accept="image/*" multiple />
+            </label>
+          </div>
+          <div class="image-upload">
+            <div id="image-preview" class="image-preview-grid" hidden></div>
+            <span id="image-help">Choose one or more images for new products. Existing products keep their gallery unless you upload replacements.</span>
+          </div>
+          <label>
+            Short description
+            <textarea id="description" rows="4" placeholder="Pocket-sized collectible for bags, keys and gifting." required></textarea>
+          </label>
+          <div class="form-actions">
+            <button class="primary-button" type="submit">Save Product</button>
+            <button class="secondary-button" id="reset-form" type="button">Clear</button>
+          </div>
+        </form>
+
+        <section id="inventory" class="admin-panel inventory-panel">
+          <div class="inventory-toolbar">
+            <div class="section-heading compact">
+              <p class="eyebrow">Inventory</p>
+              <h2>Storage list</h2>
+            </div>
+            <button class="secondary-button" id="reset-sample" type="button">Restore Sample</button>
+          </div>
+          <div class="table-wrap">
+            <table>
+              <thead>
+                <tr>
+                  <th>Item</th>
+                  <th>Category</th>
+                  <th>Price</th>
+                  <th>Stock</th>
+                  <th>Status</th>
+                  <th>Actions</th>
+                </tr>
+              </thead>
+              <tbody id="inventory-table"></tbody>
+            </table>
+          </div>
+        </section>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+    <script src="admin.js"></script>
+  </body>
+</html>
