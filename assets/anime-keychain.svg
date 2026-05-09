@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 240" role="img" aria-label="Acrylic anime keychain">
+  <rect width="240" height="240" rx="28" fill="#ffed94"/>
+  <circle cx="120" cy="45" r="17" fill="none" stroke="#21202c" stroke-width="10"/>
+  <path d="M120 62v30" stroke="#21202c" stroke-width="10" stroke-linecap="round"/>
+  <path d="M82 76h76l25 30-63 92-63-92z" fill="#fffdf9" stroke="#21202c" stroke-width="10" stroke-linejoin="round"/>
+  <path d="m126 96-32 44h25l-8 42 36-52h-25z" fill="#ff7a66" stroke="#21202c" stroke-width="8" stroke-linejoin="round"/>
+</svg>

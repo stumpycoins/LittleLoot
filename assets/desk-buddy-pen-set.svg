@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 240" role="img" aria-label="Desk buddy pen set">
+  <rect width="240" height="240" rx="28" fill="#f3e5ff"/>
+  <path d="M80 58h30v124l-15 22-15-22z" fill="#fffdf9" stroke="#21202c" stroke-width="10" stroke-linejoin="round"/>
+  <path d="M130 58h30v124l-15 22-15-22z" fill="#dcefff" stroke="#21202c" stroke-width="10" stroke-linejoin="round"/>
+  <path d="M80 88h30M130 88h30" stroke="#ff7a66" stroke-width="10"/>
+  <circle cx="96" cy="42" r="14" fill="#ffed94" stroke="#21202c" stroke-width="8"/>
+  <circle cx="146" cy="42" r="14" fill="#ffdbe4" stroke="#21202c" stroke-width="8"/>
+</svg>

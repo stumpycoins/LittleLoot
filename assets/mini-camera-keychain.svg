@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 240" role="img" aria-label="Mini camera keychain">
+  <rect width="240" height="240" rx="28" fill="#dcefff"/>
+  <circle cx="120" cy="48" r="18" fill="none" stroke="#21202c" stroke-width="10"/>
+  <path d="M120 66v22" stroke="#21202c" stroke-width="10" stroke-linecap="round"/>
+  <rect x="48" y="84" width="144" height="104" rx="24" fill="#fffdf9" stroke="#21202c" stroke-width="10"/>
+  <rect x="66" y="70" width="44" height="24" rx="10" fill="#ff7a66" stroke="#21202c" stroke-width="8"/>
+  <circle cx="122" cy="136" r="34" fill="#138a8a" stroke="#21202c" stroke-width="10"/>
+  <circle cx="122" cy="136" r="15" fill="#dcefff"/>
+  <circle cx="168" cy="108" r="8" fill="#ffed94" stroke="#21202c" stroke-width="6"/>
+</svg>

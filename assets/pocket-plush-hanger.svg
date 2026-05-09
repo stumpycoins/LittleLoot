@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 240" role="img" aria-label="Pocket plush hanger">
+  <rect width="240" height="240" rx="28" fill="#d7f5e7"/>
+  <circle cx="120" cy="45" r="16" fill="none" stroke="#21202c" stroke-width="10"/>
+  <path d="M120 61v28" stroke="#21202c" stroke-width="10" stroke-linecap="round"/>
+  <circle cx="85" cy="102" r="28" fill="#fff6df" stroke="#21202c" stroke-width="10"/>
+  <circle cx="155" cy="102" r="28" fill="#fff6df" stroke="#21202c" stroke-width="10"/>
+  <rect x="62" y="82" width="116" height="112" rx="48" fill="#fffdf9" stroke="#21202c" stroke-width="10"/>
+  <circle cx="99" cy="132" r="7" fill="#21202c"/>
+  <circle cx="141" cy="132" r="7" fill="#21202c"/>
+  <path d="M116 147h8l-4 7z" fill="#ff7a66" stroke="#21202c" stroke-width="5" stroke-linejoin="round"/>
+  <path d="M106 164c10 8 18 8 28 0" fill="none" stroke="#21202c" stroke-width="7" stroke-linecap="round"/>
+</svg>
